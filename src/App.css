@@ -51,6 +51,7 @@ body {
 
 h1 {
   font-size: 2rem;
+  text-transform: capitalize;
   font-weight: bold;
   text-align: left;
   padding: 2rem 1rem;
@@ -58,11 +59,17 @@ h1 {
 }
 
 h2 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   padding: 0rem 1rem;
   text-align: left;  
   color: #E8F9FD;
 }
+
+h4 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
 
 .App {
   text-align: center;
@@ -86,6 +93,15 @@ h2 {
   background-color: black;
 }
 
+.articles__list {
+  display: grid;
+  grid-template-areas: "article";
+}
+
+.articles__list__item__container {
+  grid-area: "article";
+}
+
 .articles__list__item{
   background-color: white;
   margin: 15px 0px;
@@ -95,13 +111,13 @@ h2 {
     'avatar username topic'
     'title title title'
     'votes comments read';
-  text-align: left;
-}
-
-.articles__articleli__title {
-  grid-area: title;
-  padding: 2rem 0px 2rem;
-  font-weight: bold;
+    text-align: left;
+  }
+  
+  .articles__articleli__title {
+    grid-area: title;
+    padding: 2rem 0px 2rem;
+    font-weight: bold;
 }
 
 .articles__articleli__topic {
@@ -120,7 +136,44 @@ h2 {
   grid-area: avatar;
 }
 
+.topic__container {
+  display: grid;
+  grid-template-areas: "card";
+}
 
+.topic__card {
+  grid: card;
+  background-color: white;
+  border-radius: 30px;
+  text-align: center;
+  padding: 50px;
+  margin: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  h1{
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  
+  .topic__container {
+    grid-template-areas: "card card card";
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  .articles__list {
+    display: grid;
+    grid-template-areas: "article article";
+    grid-template-columns: 50% 50%;
+  }
+
+  .articles__list__item {
+    margin: 10px;
+  }
+}
 
 /* colour palette */
 /* #FF1E00 orange
