@@ -6,7 +6,7 @@ const Articles = () => {
     const { topic } = useParams()
     return (
         <div>
-            <h1>{topic === undefined? "" : topic } Articles</h1>
+            <h1>{topic === undefined? "Articles" : `${topic} Articles` }</h1>
             <h2>Check out our avalible articles below:</h2>
             <ArticleList topic={topic}/>
         </div>

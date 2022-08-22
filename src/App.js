@@ -13,7 +13,6 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/articles" element={<Articles/>}/>
         <Route path="/articles/:topic" element={<Articles/>}/>
-        {/* <Route path="/articles/:topic" element={<ArticleByTopic/>}/> */}
       </Routes>
     
     </div>
