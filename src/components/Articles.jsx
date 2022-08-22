@@ -1,12 +1,14 @@
 import React from 'react';
 import ArticleList from './ArticleList';
+import { useParams } from 'react-router-dom';
 
 const Articles = () => {
+    const { topic } = useParams()
     return (
         <div>
-            <h1>Articles</h1>
+            <h1>{topic === undefined? "" : topic } Articles</h1>
             <h2>Check out our avalible articles below:</h2>
-            <ArticleList />
+            <ArticleList topic={topic}/>
         </div>
     );
 };
