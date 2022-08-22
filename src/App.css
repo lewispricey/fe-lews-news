@@ -1,38 +1,129 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------CSS RESET-------------------- */
+
+body {
+  background-color: #FF1E00;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  padding: 2rem 1rem;
+  color: #E8F9FD;
+}
+
+h2 {
+  font-size: 1.1rem;
+  padding: 0rem 1rem;
+  text-align: left;  
+  color: #E8F9FD;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.logo {
+  float: left;
+  font-weight: bold;
   color: white;
+  padding: 20px;
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+.navlinks {
+  padding: 20px;
+  float: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  display: flex;
+  background-color: black;
 }
+
+.articles__list__item{
+  background-color: white;
+  margin: 15px 0px;
+  padding: 15px 10px;
+  display: grid;
+  grid-template-areas: 
+    'avatar username topic'
+    'title title title'
+    'votes comments read';
+  text-align: left;
+}
+
+.articles__articleli__title {
+  grid-area: title;
+  padding: 2rem 0px 2rem;
+  font-weight: bold;
+}
+
+.articles__articleli__topic {
+  grid-area: topic;
+}
+
+.articles__articleli__votes {
+  grid-area: votes;
+}
+
+.articles__articleli__comments {
+  grid-area: read;
+}
+
+.articles__articleli__author {
+  grid-area: avatar;
+}
+
+
+
+/* colour palette */
+/* #FF1E00 orange
+#E8F9FD white
+#59CE8F green
+#000000 black*/
