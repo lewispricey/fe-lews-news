@@ -163,7 +163,7 @@ h4 {
   'title title'
   'body body'
   'likes comments'
-  'commentBtn commentBtn';
+  'votebtn commentbtn';
   grid-template-columns: 50% 50%;
 
   background-color: white;
@@ -214,6 +214,36 @@ hr {
   padding-bottom: 30px;
 }
 
+.article__vote__btns {
+  grid-area: votebtn;
+}
+
+.vote {
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 15px;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 7px;
+}
+
+.vote:disabled {
+  background-color: grey;
+}
+
+
+.vote__up {
+  background-color: rgb(0, 226, 0);
+}
+
+.vote__down {
+  background-color: rgb(216, 20, 20);
+}
+
+.vote:hover{
+  opacity: 60%;
+}
+
 .article__commentcount {
   grid-area: comments;
   text-align: right;
@@ -222,7 +252,7 @@ hr {
 }
 
 .article__leaveCommentBtn {
-  grid-area: commentBtn;
+  grid-area: commentbtn;
 }
 
 
@@ -306,7 +336,8 @@ hr {
     'divider divider divider'
     'title title title'
     'body body body'
-    'likes comments commentBtn';
+    'likes null comments'
+    'votebtn null commentbtn';
     margin: 50px 120px;
     grid-template-columns: 33% 33% 33%;
   }

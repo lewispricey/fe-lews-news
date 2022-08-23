@@ -19,15 +19,15 @@ const SignIn = () => {
     }
 
     return (
-        <div class="outer">
+        <div className="outer">
 
-            <div class="card">
-                <div class="card-inner">
-                    <img class="signin__avatar" src={user.avatar_url} alt="" srcset=""></img>
-                    <h2 class="signin__name">{user.name}</h2>
-                    <hr class="signin__divide"></hr>
+            <div className="card">
+                <div className="card-inner">
+                    <img className="signin__avatar" src={user.avatar_url} alt="" srcset=""></img>
+                    <h2 className="signin__name">{user.name}</h2>
+                    <hr className="signin__divide"></hr>
                     <label HTMLfor="username__selector">Select User:</label>
-                        <select onChange={handleChange} name="user" id="user-selector " class="selector">
+                        <select onChange={handleChange} name="user" id="user-selector " className="selector">
                             <option value=""></option>
                             {users.map((user) => <UserDropdownItem user={user}/>)}
                             
