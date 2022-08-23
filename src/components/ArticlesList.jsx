@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 import getArticles from '../api/getArticles';
 import getArticlesByTopic from '../api/getArticlesByTopic';
-import ArticleLi from './ArticleLi';
+import ArticlesLi from './ArticlesLi';
 
-const ArticleList = ({topic}) => {
+const ArticlesList = ({topic}) => {
     const [articles, setArticles] = useState([])
     
     useEffect(() => {
@@ -17,9 +17,9 @@ const ArticleList = ({topic}) => {
     
     return (
             <ul className='articles__list'>
-                {articles.map((article) => <ArticleLi key={article.article_id} article={article}/>)}
+                {articles.map((article) => <ArticlesLi key={article.article_id} article={article}/>)}
             </ul>
     );
 };
 
-export default ArticleList;
+export default ArticlesList;

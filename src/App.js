@@ -4,6 +4,7 @@ import Home from './Home';
 import Navbar from './components/Navbar';
 import Articles from './components/Articles';
 import Topics from './components/Topics';
+import Article from './components/Article';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/articles" element={<Articles/>}/>
         <Route path="/articles/:topic" element={<Articles/>}/>
         <Route path="/topics" element={<Topics/>}/>
+        <Route path="/article/:articleID" element={<Article />}/>
       </Routes>
     
     </div>
