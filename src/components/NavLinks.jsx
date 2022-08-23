@@ -7,6 +7,7 @@ const NavLinks = () => {
             <Link to="/">Home</Link>
             <Link to="/articles">Articles</Link>
             <Link to="/topics">Topics</Link>
+            <Link to="/signin">Sign In</Link>
         </div>
     );
 };

@@ -227,6 +227,51 @@ hr {
 
 
 
+.card {
+  background-color: white;
+  border-radius: 30px;
+  border: 2px white solid;
+  padding: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+
+.signin__avatar {
+  height: 70px;
+  border-radius: 50%;
+  
+}
+
+.selector__label {
+  background-color: white;
+  padding: 10px 5px;
+  border-radius: 30px;
+}
+
+.signin__name {
+  margin-top: 10px;
+  color: black;
+  text-align: center;
+}
+
+.selector {
+  margin: 5px;
+  margin-top: 10px;
+  background-color: antiquewhite;
+  border-radius: 18px;
+  border: 1.5px lightseagreen solid;
+  padding: 5px;
+
+}
+
+.signin__divide {
+  margin-top: 1.5rem;
+  border-top: 1px solid rgb(243, 97, 0);
+  width: 60%;
+  color: rgb(243, 97, 0);
+  border-radius: 5px;
+}
 
 
 
@@ -277,6 +322,23 @@ hr {
   .article__leaveCommentBtn {
     width: 9rem;
     height: 3rem;
+  }
+
+  .outer {
+    text-align: center;
+  }
+  .card {
+    display: inline-block;
+    border-radius: 30px;
+    border: 2px white solid;
+    padding: 2rem;
+    margin-top: 5rem;
+    width: 15rem;
+
+  }
+
+  .card-inner {
+    text-align: center;
   }
 }
 
