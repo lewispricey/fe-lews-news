@@ -70,7 +70,6 @@ h4 {
   text-transform: capitalize;
 }
 
-
 .App {
   text-align: center;
 }
@@ -90,7 +89,7 @@ h4 {
 
 .navbar {
   display: flex;
-  background-color: black;
+
 }
 
 .articles__list {
@@ -102,6 +101,11 @@ h4 {
   grid-area: "article";
 }
 
+.link {
+  text-decoration: none;
+  color: black;
+}
+
 .articles__list__item{
   background-color: white;
   margin: 15px 0px;
@@ -111,7 +115,7 @@ h4 {
     'avatar username topic'
     'title title title'
     'votes comments read';
-    text-align: left;
+  text-align: left;
   }
   
   .articles__articleli__title {
@@ -150,6 +154,82 @@ h4 {
   margin: 20px;
 }
 
+.fullarticle {
+  display: grid;
+  grid-template-areas: 
+  'user user'
+  'timestamp timestamp'
+  'divider divider'
+  'title title'
+  'body body'
+  'likes comments'
+  'commentBtn commentBtn';
+  grid-template-columns: 50% 50%;
+
+  background-color: white;
+  border-radius: 30px;
+  margin: 10px;
+  padding: 3rem 1rem 3rem 1rem;
+  text-align: left;
+}
+
+.article__author {
+  text-align: left;
+  grid-area: user;
+}
+
+.article__timestamp {
+  text-align: left;
+  grid-area: timestamp;
+}
+
+hr {
+  grid-area: divider;
+  border-top: 2px solid orangered;
+  border-radius: 30px;
+  color: orangered;
+  width: 100px;
+  margin-top: 1.5rem;
+}
+
+.article__title {
+  text-align: center;
+  grid-area: title;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.article__bodytext {
+  grid-area: body;
+  font-size: 1.1rem;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.article__likes{
+  grid-area: likes;
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+.article__commentcount {
+  grid-area: comments;
+  text-align: right;
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+.article__leaveCommentBtn {
+  grid-area: commentBtn;
+}
+
+
+
+
+
+
 @media only screen and (min-width: 768px) {
   /* For desktop: */
   h1{
@@ -172,6 +252,31 @@ h4 {
 
   .articles__list__item {
     margin: 10px;
+  }
+
+  .fullarticle {
+    display: grid;
+    grid-template-areas: 
+    'user user timestamp'
+    'divider divider divider'
+    'title title title'
+    'body body body'
+    'likes comments commentBtn';
+    margin: 50px 120px;
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  .article__timestamp {
+    text-align: right;
+  }
+
+  .article__commentcount {
+    text-align: center;
+  }
+
+  .article__leaveCommentBtn {
+    width: 9rem;
+    height: 3rem;
   }
 }
 
