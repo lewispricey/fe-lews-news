@@ -303,7 +303,25 @@ hr {
   border-radius: 5px;
 }
 
+.comments__card {
+  background-color: #E8F9FD;
+  margin: 4px 0px;
+  padding: 5px;
+}
 
+.hide {
+  display: none;
+}
+
+.comment__author {
+  padding: 10px 10px;
+  text-align: left;
+}
+
+.comment__body {
+  text-align: left;
+  padding: 15px 10px;
+}
 
 @media only screen and (min-width: 768px) {
   /* For desktop: */
