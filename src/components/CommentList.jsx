@@ -31,7 +31,7 @@ const CommentList = ({articleID}) => {
             <button onClick={handleClickAddComment} className='comments__addcomment__btn'>{postCommentActive ? "-" : "+"}</button>
             {postCommentActive ? <CommentForm comments={comments} setComments={setComments} articleID={articleID}/> : null}
             <ul className='comments__list'>
-                {comments.map((comment) => <CommentLi comment={comment}/>)}
+                {comments.map((comment) => <CommentLi comments={comments} setComments={setComments} comment={comment}/>)}
             </ul>
         </div>
     );

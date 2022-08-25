@@ -357,6 +357,12 @@ hr {
   background-color: #E8F9FD;
   margin: 4px 0px;
   padding: 5px;
+  display: grid;
+  grid-template-areas: 
+    'author author delete'
+    'comment comment comment'
+    'votes timestamp timestamp';
+  grid-template-columns: 40% 40% 15%;
 }
 
 .hide {
@@ -364,13 +370,38 @@ hr {
 }
 
 .comment__author {
+  grid-area: author;
   padding: 10px 10px;
   text-align: left;
 }
 
+.comment__deletebtn {
+  grid-area: delete;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #fcfcfc;
+  border: 1px solid red;
+}
+
+.comment__deletebtn:hover {
+  border: 2px solid grey;
+}
+
 .comment__body {
+  grid-area: comment;
   text-align: left;
   padding: 15px 10px;
+}
+
+.comment__votes {
+  grid-area: votes;
+}
+
+.comment__timestamp {
+  grid-area: timestamp;
 }
 
 .comment__form__container {

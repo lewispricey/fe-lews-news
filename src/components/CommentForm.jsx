@@ -9,9 +9,7 @@ const CommentForm = ({articleID, comments, setComments}) => {
 
     const handleClickPostComment = (event) => {
         event.preventDefault()
-        //grey the submit button out to prevent multiple clicks
         event.target.disabled = true
-        //trigger a validation function - user logged in & text is longerr than 5 chars. 
         if(!user.username || !articleID || !newComment){
             return window.alert("Ooops something went wrong, please check your signed in and your comment is not empty then try again...")
         }
