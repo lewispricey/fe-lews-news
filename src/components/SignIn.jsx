@@ -26,7 +26,7 @@ const SignIn = () => {
                     <img className="signin__avatar" src={user.avatar_url} alt="" srcset=""></img>
                     <h2 className="signin__name">{user.name}</h2>
                     <hr className="signin__divide"></hr>
-                    <label HTMLfor="username__selector">Select User:</label>
+                    <label htmlFor="username__selector">Select User:</label>
                         <select onChange={handleChange} name="user" id="user-selector " className="selector">
                             <option value=""></option>
                             {users.map((user) => <UserDropdownItem user={user}/>)}
