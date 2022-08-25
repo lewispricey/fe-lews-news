@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import getArticles from '../api/getArticles';
+import '../styles/articles.css'
 import getArticlesByTopic from '../api/getArticlesByTopic';
 import ArticlesFilters from './ArticlesFilters';
 import ArticlesLi from './ArticlesLi';

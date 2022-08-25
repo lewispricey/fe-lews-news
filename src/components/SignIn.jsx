@@ -3,6 +3,7 @@ import UserContext from '../contexts/User';
 import GetUsers from '../api/getUsers'
 import UserDropdownItem from './UserDropdownItem';
 import getUserByID from '../api/getUserById'
+import '../styles/signin.css'
 
 const SignIn = () => {
     const {user, setUser} = useContext(UserContext)

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../styles/article.css'
 import { useParams } from 'react-router-dom';
 import getArticleByID from '../api/getArticleByID';
 import patchArticleVote from '../api/patchArticleVote';

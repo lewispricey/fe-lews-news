@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import '../styles/comments.css'
 import postNewComment from '../api/postNewComment';
 import UserContext from '../contexts/User';
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/articles.css'
 import { Link } from 'react-router-dom';
 
 const ArticlesLi = ({article}) => {

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/articles.css'
 import ArticlesList from './ArticlesList';
 import { useParams } from 'react-router-dom';
 

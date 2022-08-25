@@ -1,0 +1,166 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------CSS RESET-------------------- */
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #FF1E00;
+}
+
+h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  text-align: left;
+  padding: 2rem 1rem;
+  color: #E8F9FD;
+}
+
+h2 {
+  font-size: 1.3rem;
+  padding: 0rem 1rem;
+  text-align: left;  
+  color: #E8F9FD;
+}
+
+h4 {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+hr {
+    grid-area: divider;
+    border-top: 2px solid orangered;
+    border-radius: 30px;
+    color: orangered;
+    width: 100px;
+    margin-top: 1.5rem;
+  }
+  
+
+.err {
+    background-color: black;
+    grid-area: err;
+    color: red;
+    padding: 20px;
+    margin: 10px 0px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.card {
+  background-color: white;
+  border-radius: 30px;
+  border: 2px white solid;
+  padding: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.selector {
+  margin: 5px;
+  margin-top: 10px;
+  background-color: antiquewhite;
+  border-radius: 18px;
+  border: none;
+  padding: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (min-width: 900px) {
+  /* For desktop: */
+  .App {
+    text-align: center;
+    width: 900px;
+    max-width: 1024;
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+
+  body {
+    height: 100%;
+    width: 100%;
+  }
+
+  .outer {
+    text-align: center;
+  }
+
+  .card {
+    display: inline-block;
+    border-radius: 30px;
+    border: 2px white solid;
+    padding: 2rem;
+    margin-top: 5rem;
+    width: 15rem;
+  }
+
+  .card-inner {
+    text-align: center;
+  }
+}
+
+/* colour palette */
+/* #FF1E00 orange
+#E8F9FD white
+#59CE8F green
+#000000 black*/

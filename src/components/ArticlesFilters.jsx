@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../styles/articles.css'
 import getSortedArticles from '../api/getSortedArticles';
 import { useSearchParams } from 'react-router-dom';
 

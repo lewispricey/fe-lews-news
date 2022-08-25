@@ -1,0 +1,39 @@
+.topic__container {
+    display: grid;
+    grid-template-areas: "card";
+  }
+  
+  .topic__card {
+    grid: card;
+    background-color: white;
+    border-radius: 30px;
+    height: 3rem;
+    text-align: center;
+    padding: 50px 20px 50px;
+    margin: 20px;
+    box-shadow: 3px 4px #3f3f3f;
+  }
+  
+  
+  .topic__card:hover {
+      background-color: rgb(126, 252, 210);
+      box-shadow: 4px 3px #3f3f3f;
+  }
+
+  .topic__link {
+    color: black;
+    text-decoration: none;
+  }
+
+  .topic__description {
+    padding: 5px;
+    font-style: italic;
+  }
+
+  @media only screen and (min-width: 900px) {
+    /* For desktop: */
+    .topic__container {
+      grid-template-areas: "card card card";
+      grid-template-columns: 33% 33% 33%;
+    }
+  }

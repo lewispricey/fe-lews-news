@@ -1,0 +1,24 @@
+.signin__avatar {
+    height: 70px;
+    border-radius: 50%;
+  }
+  
+  .selector__label {
+    background-color: white;
+    padding: 10px 5px;
+    border-radius: 30px;
+  }
+  
+  .signin__name {
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+  }
+
+  .signin__divide {
+    margin-top: 1.5rem;
+    border-top: 1px solid rgb(243, 97, 0);
+    width: 60%;
+    color: rgb(243, 97, 0);
+    border-radius: 5px;
+  }

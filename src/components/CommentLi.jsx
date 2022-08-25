@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import '../styles/comments.css'
 import deleteCommentById from '../api/deleteCommentById';
 import UserContext from '../contexts/User';
 
@@ -20,11 +21,11 @@ const CommentLi = ({comment, comments, setComments}) => {
     }
     
     return (
-        <div className='comment__card card'>
+        <div className='comment__card'>
             {user.username === comment.author ? <button onClick={handleClickDelete} className='comment__deletebtn' value={comment.comment_id}>🗑️</button> : null}
             <h5 className='comment__author'>Author: {comment.author}</h5>
             <p className='comment__body'>{comment.body}</p>
-            <p className='comment__timestamp'>Posted at: {comment.created_at}</p>
+            {/* <p className='comment__timestamp'>Posted at: {comment.created_at}</p> */}
             <p className='comment__votes'>Votes: {comment.votes}</p>
         </div>
     );
