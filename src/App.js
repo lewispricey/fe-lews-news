@@ -1,4 +1,5 @@
 import './App.css';
+import './styles/loading-spinner.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Navbar from './components/Navbar';
@@ -9,12 +10,14 @@ import UserContext from './contexts/User'
 import { useState } from 'react';
 import SignIn from './components/SignIn';
 
+
 function App() {
   const [user, setUser] = useState({})
   return (
     <BrowserRouter>
     <UserContext.Provider value ={{user, setUser}}>
 
+    <div className='loading hide'></div>
     <div className="App">
       <Navbar/>
       <p>Current User: {user.name}</p>

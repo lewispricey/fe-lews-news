@@ -13,7 +13,7 @@ const ArticlesList = ({topic}) => {
         } else{
             getArticles().then(({articles}) => setArticles(articles))
         }
-    }, [])
+    }, [topic])
     
     return (
             <ul className='articles__list'>

@@ -28,7 +28,6 @@ const Article = () => {
 
     const toggleCommentsView = () =>{
         setShowComments(!showComments)
-        console.log(showComments)
     }
     return (
         <>
@@ -44,7 +43,7 @@ const Article = () => {
             </aside>
 
             <p className='article__commentcount'>Comments: {article.comment_count}</p>
-            <button onClick={toggleCommentsView} className='article__leaveCommentBtn'>{showComments === true ? "Hide Comments": "View Comments"}</button>
+            <button onClick={toggleCommentsView} className='btn article__leaveCommentBtn'>{showComments === true ? "Hide Comments": "View Comments"}</button>
             <hr className='article__divider'/>
         </article>
             {showComments === true ? <CommentList articleID={articleID}/> : ""}

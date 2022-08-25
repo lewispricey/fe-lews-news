@@ -46,6 +46,7 @@ table {
 /* ------------------CSS RESET-------------------- */
 
 body {
+  font-family: 'Roboto', sans-serif;
   background-color: #FF1E00;
 }
 
@@ -253,8 +254,16 @@ hr {
 
 .article__leaveCommentBtn {
   grid-area: commentbtn;
+  padding: 0.3rem 1rem;
+  border: none;
+  border-radius: 30px;
+  background-color: #59CE8F;
 }
 
+
+.article__leaveCommentBtn:hover {
+  opacity: 0.8;
+}
 
 
 .card {
@@ -303,7 +312,32 @@ hr {
   border-radius: 5px;
 }
 
-.comments__card {
+.comments__container {
+  display: grid;
+  grid-template-areas: 
+    'title addcommentbtn'
+    'commentform commentform'
+    'comments comments';
+  grid-template-columns: 85% 15%;
+}
+
+.comments__heading {
+  grid-area: title;
+}
+
+.comments__addcomment__btn {
+  grid-template-areas: addcommentbtn;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: #59CE8F;
+  color: orangered;
+}
+
+.comment__card {
   background-color: #E8F9FD;
   margin: 4px 0px;
   padding: 5px;
@@ -321,6 +355,48 @@ hr {
 .comment__body {
   text-align: left;
   padding: 15px 10px;
+}
+
+.comment__form__container {
+  grid-area: commentform;
+  text-align: center;
+}
+
+.comment__form__inputlabel {
+  display: block;
+  text-align: left;
+}
+
+
+.comment__form__input {
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+
+  padding: 2rem;
+
+}
+
+.comment__form__inputlabel {
+  padding: 1rem 2rem 0.8rem 2rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.comment__form__btn {
+  padding: 0.3rem 1rem;
+  border: none;
+  border-radius: 30px;
+  background-color: #59CE8F;
+  margin: 1rem;
+}
+
+.comment__form__btn:hover {
+  opacity: 0.9;
+}
+
+.comments__list {
+  grid-area: comments;
 }
 
 @media only screen and (min-width: 768px) {
