@@ -1,6 +1,6 @@
 import './App.css';
 import './styles/loading-spinner.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useSearchParams } from 'react-router-dom';
 import Home from './Home';
 import Navbar from './components/Navbar';
 import Articles from './components/Articles';

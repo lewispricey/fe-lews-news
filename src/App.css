@@ -93,6 +93,22 @@ h4 {
 
 }
 
+.articles__filter__container {
+  color: white;
+  display: grid;
+  grid-template-areas: 
+      'sort order';
+}
+
+.articles__filter__sortby {
+  grid-area: sort;
+  border: none;
+}
+
+.articles__filter__order {
+  grid-area: order;
+}
+
 .articles__list {
   display: grid;
   grid-template-areas: "article";
@@ -299,7 +315,7 @@ hr {
   margin-top: 10px;
   background-color: antiquewhite;
   border-radius: 18px;
-  border: 1.5px lightseagreen solid;
+  border: none;
   padding: 5px;
 
 }
