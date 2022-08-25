@@ -33,7 +33,7 @@ const CommentList = ({articleID}) => {
             {err ? <p className='err'>Please sign in to post a comment</p> : null}
             {postCommentActive ? <CommentForm comments={comments} setComments={setComments} articleID={articleID}/> : null}
             <ul className='comments__list'>
-                {comments.map((comment) => <CommentLi comments={comments} setComments={setComments} comment={comment}/>)}
+                {comments.map((comment) => <CommentLi key={comment.comment_id} comments={comments} setComments={setComments} comment={comment}/>)}
             </ul>
         </div>
     );

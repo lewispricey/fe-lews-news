@@ -24,13 +24,13 @@ const SignIn = () => {
 
             <div className="card">
                 <div className="card-inner">
-                    <img className="signin__avatar" src={user.avatar_url} alt="" srcset=""></img>
+                    <img className="signin__avatar" src={user.avatar_url} alt=""></img>
                     <h2 className="signin__name">{user.name}</h2>
                     <hr className="signin__divide"></hr>
                     <label htmlFor="username__selector">Select User:</label>
                         <select onChange={handleChange} name="user" id="user-selector " className="selector">
                             <option value=""></option>
-                            {users.map((user) => <UserDropdownItem user={user}/>)}
+                            {users.map((user) => <UserDropdownItem key={user.username} user={user}/>)}
                             
                         </select>
                 </div>
