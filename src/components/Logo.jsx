@@ -2,7 +2,7 @@ import React from 'react';
 
 const Logo = () => {
     return (
-        <a className='logo'>Lews News</a>
+        <a className='logo'>Lew's News</a>
     );
 };
 
