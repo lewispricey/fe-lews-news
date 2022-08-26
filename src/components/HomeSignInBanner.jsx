@@ -6,7 +6,7 @@ const HomeSignInBanner = () => {
     return (
             <section className='home__signin__banner'>
                 <h2 className='home__signin__title'>Hey, we can see you arn't signed in!</h2>
-                <p className='home__signin__subtext'>Please click the button below to sign in for the best experiance...</p>
+                <p className='home__signin__subtext'>Please click the button below to sign in for the best experience...</p>
                 <Link className='home__signin__btn' to="/signin">Sign In</Link>
             </section>
     );

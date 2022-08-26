@@ -5,6 +5,8 @@ import getArticleByID from '../api/getArticleByID';
 import patchArticleVote from '../api/patchArticleVote';
 import CommentList from './CommentList';
 import Loading from './Loading';
+import Home from './Home';
+import Err404 from './Err404'
 
 const Article = () => {
     const [article, setArticle] = useState({})
@@ -18,6 +20,10 @@ const Article = () => {
         getArticleByID(articleID).then(({article}) => {
             setArticle(article)
             setIsLoading(false)
+        }).catch((err) => {
+            setIsLoading(false)
+            setErr(404)
+            return <Home/>
         })
     }, [articleID])
 
@@ -47,6 +53,7 @@ const Article = () => {
     }
     return (
         <>
+        {err === 404 ? <Err404 /> : null}
         <article className='fullarticle'>
             {isLoading ? <Loading layoutClass="article__loading"/> : null}
             <h3 className='article__title'>{article.title}</h3>

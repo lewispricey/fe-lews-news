@@ -4,12 +4,37 @@
     text-align: center;
 }
 
+.home__signin__title {
+    text-align: center;
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+}
+
+.home__signin__subtext {
+    padding-bottom: 30px; 
+}
+
+.home__signin__btn {
+    text-decoration: none;
+    color: blue;
+    font-size: 1.2rem;
+    border: 1px solid white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: white;
+}
+
 .home__trending__container {
     display: grid;
     grid-template-areas: 
         'title'
+        'err'
         'card';
     margin: 2rem 0rem;
+}
+
+.home__err {
+    text-align: center;
 }
 
 .home__trending__title {
@@ -42,11 +67,14 @@
     padding: 35px 0px 20px;
 }
 
+
+
 @media only screen and (min-width: 900px) {
     .home__trending__container {
         display: grid;
         grid-template-areas: 
-            'title title';
+            'title title'
+            'err err';
         grid-template-columns: 50% 50%;
         margin: 2rem 0rem;
         padding: 0rem;

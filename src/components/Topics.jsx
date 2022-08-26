@@ -6,7 +6,7 @@ import Loading from './Loading';
 
 const Topics = () => {
     const [topics, setTopics] = useState([])
-    const [isLoading, setIsLoading] = useState([])
+    const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
         setIsLoading(true)

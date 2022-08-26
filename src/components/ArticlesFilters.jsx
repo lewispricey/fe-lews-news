@@ -22,6 +22,8 @@ const ArticlesFilters = ({articles, setArticles, setIsLoading}) => {
         .then((data) => {
             setIsLoading(false)
             setArticles(data.articles)
+        }).catch((err) => {
+            console.log("nope")
         })
     }, [searchParams])
 
