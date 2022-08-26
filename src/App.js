@@ -9,6 +9,7 @@ import Article from './components/Article';
 import UserContext from './contexts/User'
 import { useState } from 'react';
 import SignIn from './components/SignIn';
+import Err404 from './components/Err404';
 
 
 function App() {
@@ -25,8 +26,8 @@ function App() {
         <Route path="/topics" element={<Topics/>}/>
         <Route path="/article/:articleID" element={<Article />}/>
         <Route path="/signin" element={<SignIn />}/>
-      </Routes>
-    
+        <Route path="*" element={<Err404 />} />
+      </Routes>    
     </div>
     </UserContext.Provider>
     </BrowserRouter>
