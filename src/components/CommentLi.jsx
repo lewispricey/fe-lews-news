@@ -26,9 +26,8 @@ const CommentLi = ({comment, comments, setComments}) => {
             <div></div>
             {user.username === comment.author ? <button onClick={handleClickDelete} className='comment__deletebtn' value={comment.comment_id}>❌</button>: null}
             {isErr ? <p className='err'>Ooops something went wrong, please check and try again...</p> : null}
-            <h5 className='comment__author'>Author: {comment.author}</h5>
+            <h5 className='comment__author'>User: {comment.author}</h5>
             <p className='comment__body'>{comment.body}</p>
-            {/* <p className='comment__timestamp'>Posted at: {comment.created_at}</p> */}
             <p className='comment__votes'>Votes: {comment.votes}</p>
         </div>
     );

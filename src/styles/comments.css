@@ -36,7 +36,7 @@
       'err err err'
       'author author delete'
       'comment comment comment'
-      'votes timestamp timestamp';
+      'votes votes votes';
     grid-template-columns: 40% 40% 15%;
     border-radius: 30px;
     padding: 1.7rem;
@@ -75,8 +75,8 @@
   
   .comment__votes {
     grid-area: votes;
-    text-align: left;
-    padding: 2px 10px;
+    text-align: center;
+    padding: 5px 10px;
   }
   
   .comment__timestamp {

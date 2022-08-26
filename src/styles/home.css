@@ -1,0 +1,63 @@
+.home__signin__banner {
+    padding: 2rem;
+    background-color: rgb(28, 201, 28);
+    text-align: center;
+}
+
+.home__trending__container {
+    display: grid;
+    grid-template-areas: 
+        'title'
+        'card';
+    margin: 2rem 0rem;
+}
+
+.home__trending__title {
+    text-align: left;
+    font-size: 1.5rem;
+    color: white;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    grid-area: title;
+}
+
+.home__trendingarticle__container {
+    padding: 1rem;
+    margin: 10px auto;
+    height: 8rem;
+    width: 85%;
+    background-color: white;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 2px 3px #3f3f3f;
+}
+
+.home__trendingarticle__container:hover {
+    opacity: 80%;
+}
+
+.home__trendingarticle__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 35px 0px 20px;
+}
+
+@media only screen and (min-width: 900px) {
+    .home__trending__container {
+        display: grid;
+        grid-template-areas: 
+            'title title';
+        grid-template-columns: 50% 50%;
+        margin: 2rem 0rem;
+        padding: 0rem;
+    }
+
+    .home__trendingarticle__container {
+        margin: 10px auto;
+    }
+
+    .home__signin__banner {
+        border-radius: 20px;
+        margin: 0px 5rem;
+    }
+}

@@ -16,8 +16,8 @@
   
   
   .topic__card:hover {
-      background-color: rgb(126, 252, 210);
-      box-shadow: 4px 3px #3f3f3f;
+    box-shadow: 4px 3px #3f3f3f;
+    background-color: rgb(126, 252, 210);
   }
 
   .topic__link {

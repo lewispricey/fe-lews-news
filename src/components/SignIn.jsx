@@ -34,13 +34,13 @@ const SignIn = () => {
 
             <div className="card">
                 <div className="card-inner">
-                    { isLoading ? <Loading layoutClass=""/> : <img className="signin__avatar" src={user.avatar_url} alt={user.name}></img>}
+                    { isLoading ? <Loading layoutClass=""/> : <img className="signin__avatar" src={user.avatar_url || 'https://riverlegacy.org/wp-content/uploads/2021/07/blank-profile-photo.jpeg'} alt={user.name}></img>}
                     {/* <img className="signin__avatar" src={user.avatar_url} alt=""></img> */}
                     <h2 className="signin__name">{user.name}</h2>
                     <hr className="signin__divide"></hr>
                     <label htmlFor="username__selector">Select User:</label>
                         <select onChange={handleChange} name="user" id="user-selector " className="selector">
-                            <option value=""></option>
+                            <option value="" disabled="true" ></option>
                             {users.map((user) => <UserDropdownItem key={user.username} user={user}/>)}
                             
                         </select>

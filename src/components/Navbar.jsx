@@ -19,11 +19,11 @@ const Navbar = ({user}) => {
         <div className='navbar'>
             <Logo/>
             <NavLinks/>
-            <p className='nav__currentUser'>hey, {user.name || "guest"}</p>
+            <img className='navbar__avatar' src={user.avatar_url || 'https://riverlegacy.org/wp-content/uploads/2021/07/blank-profile-photo.jpeg'} alt={user.username} />
             <button onClick={handleClickNav} className='navbar__hamburger'>☰</button>
             
             {navClicked ? (
-            <div className={navClicked ? 'navbar__expanded' : 'navlinks'} >
+                <div className={navClicked ? 'navbar__expanded' : 'navlinks'} >
             <Link onClick={handleClickLink} className='nav__link' to="/">Home</Link>
             <Link onClick={handleClickLink} className='nav__link' to="/articles">Articles</Link>
             <Link onClick={handleClickLink} className='nav__link' to="/topics">Topics</Link>

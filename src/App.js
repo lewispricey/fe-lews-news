@@ -1,7 +1,7 @@
 import './styles/loading-spinner.css'
 import './styles/new-App.css'
-import { BrowserRouter, Routes, Route, useSearchParams } from 'react-router-dom';
-import Home from './Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Articles from './components/Articles';
 import Topics from './components/Topics';
@@ -9,7 +9,6 @@ import Article from './components/Article';
 import UserContext from './contexts/User'
 import { useState } from 'react';
 import SignIn from './components/SignIn';
-import Loading from './components/Loading';
 
 
 function App() {

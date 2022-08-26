@@ -57,14 +57,14 @@ h1 {
   font-weight: bold;
   text-align: left;
   padding: 2rem 1rem;
-  color: #E8F9FD;
+  color: white;
 }
 
 h2 {
   font-size: 1.3rem;
   padding: 0rem 1rem;
   text-align: left;  
-  color: #E8F9FD;
+  color: white;
 }
 
 h4 {
@@ -131,7 +131,7 @@ hr {
   h1 {
     text-align: center;
   }
-  
+
   h2 {
     text-align: center;
   }
