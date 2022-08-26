@@ -30,7 +30,7 @@ const Home = () => {
                 {!user.username ? <HomeSignInBanner/> : null}
                 <section className='home__trending__container'>
                     <h2 className='home__trending__title'>Newest Articles:</h2>
-                    {isLoading ? <Loading /> : null}
+                    {isLoading ? <Loading layoutClass='home__loading'/> : null}
                     {err ? <p className='err home__err'>Something went wrong, please try again...</p> : null}
                     {newArticles.map((article) => <HomeTrendingLi key={article.title} article={article}/>)}
                 </section>

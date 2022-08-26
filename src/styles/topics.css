@@ -1,6 +1,7 @@
 .topic__container {
     display: grid;
     grid-template-areas: "card";
+    padding-top: 1rem;
   }
   
   .topic__card {

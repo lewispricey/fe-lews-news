@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HomeTrendingLi = ({article}) => {
     return (
-        <div className='home__trendingarticle__container'>
+        <Link className='home__trendingarticle__container' to={`/article/${article.article_id}`}>
             <h3 className='home__trendingarticle__title'>{article.title}</h3>
-            <p>Author: {article.author}</p>
-        </div>
+            <p className='home__trendingarticle__author'>Author: {article.author}</p>
+        </Link>
     );
 };
 

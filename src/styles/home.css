@@ -29,6 +29,7 @@
     grid-template-areas: 
         'title'
         'err'
+        'loading'
         'card';
     margin: 2rem 0rem;
 }
@@ -55,16 +56,25 @@
     border-radius: 30px;
     text-align: center;
     box-shadow: 2px 3px #3f3f3f;
+    text-decoration: none;
+    color: black;
 }
 
 .home__trendingarticle__container:hover {
     opacity: 80%;
 }
 
+.home__loading {
+    grid-area: loading;
+    text-align: center;
+    margin: auto;
+}
+
 .home__trendingarticle__title {
     font-size: 1.2rem;
     font-weight: bold;
     padding: 35px 0px 20px;
+    text-decoration: none;
 }
 
 
@@ -74,10 +84,12 @@
         display: grid;
         grid-template-areas: 
             'title title'
+            'loading loading'
             'err err';
         grid-template-columns: 50% 50%;
         margin: 2rem 0rem;
         padding: 0rem;
+        text-align: center;
     }
 
     .home__trendingarticle__container {
