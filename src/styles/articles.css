@@ -1,81 +1,83 @@
 .articles__filter__container {
-    color: white;
-    display: grid;
-    padding: 0.3rem 1rem;
-    grid-template-areas: 
-        'sort order';
+  color: white;
+  display: grid;
+  padding: 0.3rem 1rem;
+  grid-template-areas: 
+    'sort order';
   }
   
-  .articles__filter__sortby {
-    grid-area: sort;
-    border: none;
-    text-align: left;
-  }
+.articles__filter__sortby {
+  grid-area: sort;
+  border: none;
+  text-align: left;
+}
   
-  .articles__filter__order {
-    grid-area: order;
-    text-align: right;
-  }
+.articles__filter__order {
+  grid-area: order;
+  text-align: right;
+}
   
+.articles__list {
+  display: grid;
+  grid-template-areas: "article";
+}
+  
+.articles__list__item__container {
+  grid-area: "article";
+}
+
+.articles__list__item {
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 3px 4px #3f3f3f;
+  margin: 15px 10px;
+  padding: 30px 30px;
+  display: grid;
+  grid-template-areas: 
+    'avatar username topic'
+    'title title title'
+    'votes comments read';
+  text-align: left;
+}
+  
+.articles__list__item:hover {
+  background-color: rgb(126, 252, 210);
+  box-shadow: 4px 3px #3f3f3f;
+}
+  
+.articles__articleli__title {
+  grid-area: title;
+  padding: 2rem 0px 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+  
+.articles__articleli__topic {
+  grid-area: topic;
+  text-transform: capitalize;
+}
+  
+.articles__articleli__votes {
+  grid-area: votes;
+}
+  
+.articles__articleli__comments {
+  grid-area: read;
+}
+  
+.articles__articleli__author {
+  grid-area: avatar;
+}
+
+@media only screen and (min-width: 900px) {
   .articles__list {
     display: grid;
-    grid-template-areas: "article";
+    grid-template-areas: "article article";
+    grid-template-columns: 50% 50%;
   }
-  
-  .articles__list__item__container {
-    grid-area: "article";
-  }
-
-  .articles__list__item{
-    background-color: white;
-    border-radius: 50px;
-    box-shadow: 3px 4px #3f3f3f;
-    margin: 15px 10px;
-    padding: 30px 30px;
-    display: grid;
-    grid-template-areas: 
-      'avatar username topic'
-      'title title title'
-      'votes comments read';
-    text-align: left;
-    }
-  
-    .articles__list__item:hover {
-      background-color: rgb(126, 252, 210);
-      box-shadow: 4px 3px #3f3f3f;
-    }
-  
-    .articles__articleli__title {
-      grid-area: title;
-      padding: 2rem 0px 2rem;
-      font-weight: bold;
-  }
-  
-  .articles__articleli__topic {
-    grid-area: topic;
-  }
-  
-  .articles__articleli__votes {
-    grid-area: votes;
-  }
-  
-  .articles__articleli__comments {
-    grid-area: read;
-  }
-  
-  .articles__articleli__author {
-    grid-area: avatar;
-  }
-
-  @media only screen and (min-width: 900px) {
-    .articles__list {
-        display: grid;
-        grid-template-areas: "article article";
-        grid-template-columns: 50% 50%;
-      }
     
-      .articles__list__item {
-        margin: 10px;
-        height: 10rem;
-      }
+  .articles__list__item {
+    margin: 10px;
+    height: 10rem;
   }
+}

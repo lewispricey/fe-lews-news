@@ -60,7 +60,7 @@ const Article = () => {
             </aside>
 
             <p className='article__commentcount'>Comments: {article.comment_count}</p>
-            <button onClick={toggleCommentsView} className='btn article__leaveCommentBtn'>{showComments === true ? "Hide Comments": "View Comments"}</button>
+            <button onClick={toggleCommentsView} className='article__leaveCommentBtn'>{showComments === true ? "Hide Comments": "View Comments"}</button>
             <hr className='article__divider'/>
             {err === true ? <p className='article__err err'>Vote Failed, please check and try again...</p> : null}
         </article>

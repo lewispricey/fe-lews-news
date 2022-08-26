@@ -52,14 +52,15 @@
   }
   
   .comment__deletebtn {
+    margin: auto;
     grid-area: delete;
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     background-color: #fcfcfc;
-    border: 1px solid red;
+    border: 1px solid black;
   }
   
   .comment__deletebtn:hover {
@@ -74,6 +75,8 @@
   
   .comment__votes {
     grid-area: votes;
+    text-align: left;
+    padding: 2px 10px;
   }
   
   .comment__timestamp {

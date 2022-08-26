@@ -11,7 +11,7 @@ const CommentLi = ({comment, comments, setComments}) => {
         target.disabled = true
         deleteCommentById(target.value)
         .then(() => {
-            isErr(false)
+           isErr(false)
            const updatedComments = comments.filter((currComment) => currComment.comment_id !== comment.comment_id)
            setComments(updatedComments) 
         })
@@ -23,7 +23,8 @@ const CommentLi = ({comment, comments, setComments}) => {
     
     return (
         <div className='comment__card'>
-            {user.username === comment.author ? <button onClick={handleClickDelete} className='comment__deletebtn' value={comment.comment_id}>🗑️</button> : null}
+            <div></div>
+            {user.username === comment.author ? <button onClick={handleClickDelete} className='comment__deletebtn' value={comment.comment_id}>❌</button>: null}
             {isErr ? <p className='err'>Ooops something went wrong, please check and try again...</p> : null}
             <h5 className='comment__author'>Author: {comment.author}</h5>
             <p className='comment__body'>{comment.body}</p>
