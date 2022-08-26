@@ -1,0 +1,144 @@
+.fullarticle {
+    display: grid;
+    grid-template-areas: 
+      'user user'
+      'timestamp timestamp'
+      'divider divider'
+      'title title'
+      'loading loading'
+      'body body'
+      'likes comments'
+      'votebtn commentbtn'
+      'error error';
+    grid-template-columns: 50% 50%;
+    background-color: white;
+    border-radius: 30px;
+    margin: 10px;
+    padding: 3rem 1rem 2rem 1rem;
+    text-align: left;
+  }
+  
+  
+  .article__author {
+    text-align: left;
+    grid-area: user;
+  }
+  
+  .article__timestamp {
+    text-align: left;
+    grid-area: timestamp;
+  }
+
+  .article__title {
+    text-align: center;
+    grid-area: title;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+  
+  .article__bodytext {
+    grid-area: body;
+    font-size: 1.1rem;
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+  
+  .article__likes{
+    grid-area: likes;
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+  
+  .article__vote__btns {
+    grid-area: votebtn;
+  }
+  
+  .vote {
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 15px;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 7px;
+  }
+  
+  .vote:disabled {
+    background-color: grey;
+  }
+  
+  
+  .vote__up {
+    background-color: rgb(0, 226, 0);
+  }
+  
+  .vote__down {
+    background-color: rgb(216, 20, 20);
+  }
+  
+  .vote:hover {
+    opacity: 60%;
+  }
+  
+  .article__commentcount {
+    grid-area: comments;
+    text-align: right;
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+  
+  .article__leaveCommentBtn {
+    grid-area: commentbtn;
+    padding: 0rem 1rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #59CE8F;
+    margin: auto;
+  }
+  
+  
+  .article__leaveCommentBtn:hover {
+    opacity: 0.8;
+  }
+  
+  .article__err {
+    text-align: center;
+    grid-area: error;
+  }
+
+  .article__loading {
+    grid-area: loading;
+  }
+
+@media only screen and (min-width: 900px) {
+  .fullarticle {
+    display: grid;
+    grid-template-areas: 
+      'user timestamp timestamp'
+      'divider divider divider'
+      'title title title'
+      'loading loading loading'
+      'body body body'
+      'likes null comments'
+      'votebtn null commentbtn'
+      'error error error';
+    margin: 50px 120px;
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  .article__timestamp {
+    text-align: right;
+  }
+
+  .article__commentcount {
+    text-align: center;
+  }
+
+  .article__leaveCommentBtn {
+    margin: auto;
+    width: 9rem;
+    height: 2rem;
+  }
+
+}

@@ -1,4 +1,5 @@
 import {useState, useEffect, useContext} from 'react';
+import '../styles/comments.css'
 import getCommentsByArticleId from '../api/getCommentsByArticleId';
 import UserContext from '../contexts/User';
 import CommentForm from './CommentForm';
@@ -8,6 +9,7 @@ const CommentList = ({articleID}) => {
     const {user} = useContext(UserContext)
     const [comments, setComments] = useState([])
     const [postCommentActive, setPostCommentActive] = useState(false)
+    const [err, setErr] = useState(false)
     
     useEffect(() => {
         getCommentsByArticleId(articleID)
@@ -17,9 +19,8 @@ const CommentList = ({articleID}) => {
     }, [articleID])
 
     const handleClickAddComment = () => {
-        //check user signed in, if not give message to sign in before showing the comment form
         if(user.username === undefined) {
-            window.alert("Please sign in to post a comment")
+            setErr(true)
         } else{
             setPostCommentActive(!postCommentActive)}
 
@@ -29,9 +30,10 @@ const CommentList = ({articleID}) => {
         <div className='comments__container'>
             <h2 className='comments__heading'>Comments</h2>
             <button onClick={handleClickAddComment} className='comments__addcomment__btn'>{postCommentActive ? "-" : "+"}</button>
+            {err ? <p className='err'>Please sign in to post a comment</p> : null}
             {postCommentActive ? <CommentForm comments={comments} setComments={setComments} articleID={articleID}/> : null}
             <ul className='comments__list'>
-                {comments.map((comment) => <CommentLi comment={comment}/>)}
+                {comments.map((comment) => <CommentLi key={comment.comment_id} comments={comments} setComments={setComments} comment={comment}/>)}
             </ul>
         </div>
     );

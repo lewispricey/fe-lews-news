@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const TopicLi = ({topic}) => {
     return (
-        <Link to={`/articles/${topic.slug}`}>
+        <Link className='topic__link' to={`/articles/${topic.slug}`}>
             <li className='topic__card'>
-              <h4>{topic.slug}</h4>  
-              <p>{topic.description}</p>
+              <h4 className='topic__title'>{topic.slug}</h4>  
+              <p className='topic__description'>{topic.description}</p>
             </li>
         </Link>
     );
