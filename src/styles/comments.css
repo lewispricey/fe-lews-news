@@ -33,6 +33,7 @@
     background-color: #e1f7fc;
     display: grid;
     grid-template-areas: 
+      'err err err'
       'author author delete'
       'comment comment comment'
       'votes timestamp timestamp';

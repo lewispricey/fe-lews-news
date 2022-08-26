@@ -9,6 +9,7 @@ import Article from './components/Article';
 import UserContext from './contexts/User'
 import { useState } from 'react';
 import SignIn from './components/SignIn';
+import Loading from './components/Loading';
 
 
 function App() {
@@ -16,11 +17,8 @@ function App() {
   return (
     <BrowserRouter>
     <UserContext.Provider value ={{user, setUser}}>
-
-    <div className='loading hide'></div>
     <div className="App">
       <Navbar user={user}/>
-    
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/articles" element={<Articles/>}/>

@@ -3,7 +3,7 @@ import '../styles/articles.css'
 import getSortedArticles from '../api/getSortedArticles';
 import { useSearchParams } from 'react-router-dom';
 
-const ArticlesFilters = ({articles, setArticles}) => {
+const ArticlesFilters = ({articles, setArticles, setIsLoading}) => {
     const [searchParams, setSearchParams] = useSearchParams();
    
     const handleChangeSort = ({target}) => {
@@ -16,9 +16,13 @@ const ArticlesFilters = ({articles, setArticles}) => {
     }
 
     useEffect(()=> {
+        setIsLoading(true)
         const search = [searchParams.get("sortBy"), searchParams.get("order"),]
         getSortedArticles(search[0], search[1])
-        .then((data) => {setArticles(data.articles)})
+        .then((data) => {
+            setIsLoading(false)
+            setArticles(data.articles)
+        })
     }, [searchParams])
 
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/articles.css'
 import { Link } from 'react-router-dom';
+import Loading from './Loading';
 
 const ArticlesLi = ({article}) => {
     return (
