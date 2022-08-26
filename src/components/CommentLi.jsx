@@ -11,12 +11,12 @@ const CommentLi = ({comment, comments, setComments}) => {
         target.disabled = true
         deleteCommentById(target.value)
         .then(() => {
-           isErr(false)
+           setIsErr(false)
            const updatedComments = comments.filter((currComment) => currComment.comment_id !== comment.comment_id)
            setComments(updatedComments) 
         })
         .catch((err) => {
-            isErr(true)
+            setIsErr(true)
             target.disabled = false
         })
     }
