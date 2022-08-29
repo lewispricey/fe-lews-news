@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Lew's News
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About This Project
+A news app for positive news on any topic!
 
-## Available Scripts
+Users can find articles though filtering and sorting and interact with these articles though votes and comments. 
 
-In the project directory, you can run:
+The project uses an API backend powered by Nodejs/Express, which can be found on the link below:
+https://github.com/lewispricey/be-lews-news
 
-### `npm start`
+You can find a hosted version of the project at:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+https://www.lewsnews.lewisprice.co.uk
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To clone this repository use the following CLI command:
 
-### `npm run build`
+`git clone https://github.com/lewispricey/fe-lews-news`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project **requires** the following **dependencies**:
+- react js
+- axios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To **install** these **dependencies** run the folowing CLI command:
+`npm install`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To start the development server run:
+`npm start`
 
-### `npm run eject`
+The development server will start on http://localhost:3000 unless the port is already in use, at which point please follow the console prompts.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Building The App
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To **build** this **project** localy run the folowing CLI command:
+`npm run build`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Minimum Versions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Node JS: v18.5.0
+- React JS: v18.2.0
+- Axios: v0.27.2
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Contact
+If you have any questions about the project please feel free to reach out, you can contact me via email at github@lprice.dev
